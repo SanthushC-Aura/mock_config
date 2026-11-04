@@ -104,16 +104,15 @@ services:
 jodconverter:
   local:
     enabled: true
-    office-home:
-    working-dir: C:\var\tmp\auradocsv4\temp
+    office-home: /usr/lib64/libreoffice
+    working-dir: /var/tmp/auradocsv4/temp
     process-timeout: 60000
     process-retry-interval: 250
     task-execution-timeout: 300000   # 5 min — covers large files up to ~100 MB
     task-queue-timeout: 300000
     max-tasks-per-process: 50
-    port-numbers: 3002,3003,3004
+    port-numbers: 3002
     existing-process-action: connect_or_kill
-    kill-existing-process: true
 
   large-file:
     port-numbers: 3010, 3011
